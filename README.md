@@ -1,2 +1,5 @@
-# firstProject
-First project for Minje and Tommy
+# FitnessInvestigators
+
+Webpage for Fitness Investigators blog.
+
+*Made with pure CSS
