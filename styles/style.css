@@ -14,11 +14,12 @@ body{
 
 p,
 ul{
-    font-size:1em;
+    font-size:.8em;
 }
 
 h1, h2{
     font-family: "Open Sans", Sans-serif;
+    font-size:.8em;
 }
 
 a{
@@ -27,17 +28,6 @@ a{
     width:100%;
     height:100%;
 }
-
-a:link,
-a:active,
-a:visited{
-    color:black;
-}
-
-a:hover{
-    color:tomato;
-}
-
 
 h1{
     font-size:2em;
@@ -62,6 +52,10 @@ ul,
 
 /*----------Nagivation------------*/
 
+.navigation{
+    background-color:black;
+}
+
 .navigation ul,
 .navigation li{
     text-transform: uppercase;
@@ -75,6 +69,7 @@ ul,
 .navigation ul{
     padding: .25em 0;
     margin: 0;
+    color:white;
 }
 
 .navigation li{
@@ -87,9 +82,20 @@ ul,
 }
 
 
+.navigation a:link,
+.navigation a:active,
+.navigation a:visited{
+    color:white;
+}
+
+.navigation li a:hover{
+    color:tomato;
+}
+
+
 /*----------Header------------*/
 
-.header,
+
 .footer{
     background-color:tomato;
     color:white;
@@ -97,15 +103,20 @@ ul,
 
 .header-primary{
     padding: 1em 1em;
+    height:450px;
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(1,1,1,0) 100%), url("http://i.huffpost.com/gen/1555477/images/o-WORKING-OUT-GYM-facebook.jpg");
+    background-size:cover;
 }
 
 .header h2{
     font-size: 2.5em;
-    margin:1em 0 0;
+    margin:2em 0 0;
+    color:rgba(255,255,255,1);
 }
 
 .header p{
     margin-bottom: 2.5em;
+    color:rgba(255,255,255,.7);
 }
 
 .footer{
@@ -125,16 +136,16 @@ ul,
 .navigation{
     padding:1em 1em;
 }
-    
-.clearfix::after{
-    content=" ";
-    display:table;
+
+.clearfix{
     clear:both;
 }
 
+
+
 /*----------Media Queries------------*/
 
-@media (min-width: 600px) and (max-width: 960px){
+@media (min-width: 600px){
     
 /*----------Columns------------*/
     
@@ -167,19 +178,42 @@ ul,
         margin: auto;
     }
     
+    .navigation{
+        padding:1.8em 2em 1em;
+        background:black;
+    }
+    
     .navigation h1{
-        display:inline-block;
+        margin:0 auto;
+        font-size:1em;
         float:left;
+    }
+    
+    .navigation li{
+        margin-left:1em;
     }
     
     .navigation ul,
     .navigation li{
-        display:inline-block;
         float:right;
+    }
+    
+    .navigation h1,
+    .navigation ul,
+    .navigation li{
+        display:inline-block;
+    }
+    
+    .navigation h1,
+    .navigation a{
+        color:white;
+    }
+    
+    .clearfix2:after{
+        content: " ";
+        display:table;
+        clear:both;
     }
     
 }
 
-@media (min-width: 961px){
-    
-}
